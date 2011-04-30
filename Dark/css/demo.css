@@ -1,0 +1,14 @@
+/*
+By Joe Pettersson @ http://www.joepettersson.com
+A dark jQuery powered navigation menu
+
+Distributed under the Creative Commons Attribution 3.0 License
+*/
+
+/***** Demo styles - you can safely ignore all of these styles, they merely style the demo *****/
+html, body { border:0; margin:0; padding:0; }
+body { font:12px Arial, Helvetica, sans-serif; background: url(../img/bg-tile.png) repeat; color: #444}
+
+.wrapper { width:757px; margin:60px auto; }
+
+h1 {width: 757px; margin: 60px auto 5px; font-size: 16px; font-family: Georgia, Times New Roman, serif; font-weight: normal; font-style: italic; color: #777; }

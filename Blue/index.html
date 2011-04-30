@@ -1,0 +1,86 @@
+<!doctype html>  
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+
+<!-- BEGIN Meta tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>A jQuery powered HTML5 navigation menu</title>
+
+<meta name="description" content="A jQuery powered HTML5 navigation menu" />
+<meta name="author" content="Joe Pettersson, http://www.joepettersson.com" />
+<!-- END Meta tags -->
+
+<!-- BEGIN Demo CSS - You can safely ignore this part -->
+<link rel="stylesheet" href="css/demo.css">
+<!-- END Demo CSS -->
+
+<!-- BEGIN Navigation bar CSS - This is where the magic happens -->
+<link rel="stylesheet" href="css/navbar.css">
+<!-- END Navigation bar CSS -->
+
+<!-- BEGIN JavaScript -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+	// Requried: Navigation bar drop-down
+	$("nav ul li").hover(function() {
+		$(this).addClass("active");
+		$(this).find("ul").show().animate({opacity: 1}, 400);
+		},function() {
+		$(this).find("ul").hide().animate({opacity: 0}, 200);
+		$(this).removeClass("active");
+	});
+	
+	// Requried: Addtional styling elements
+	$('nav ul li ul li:first-child').prepend('<li class="arrow"></li>');
+	$('nav ul li:first-child').addClass('first');
+	$('nav ul li:last-child').addClass('last');
+	$('nav ul li ul').parent().append('<span class="dropdown"></span>').addClass('drop');
+
+});
+</script>
+<!-- END JavaScript -->
+
+</head>
+
+<body>
+
+	<h1>A jQuery powered HTML5 navigation menu</h1>
+
+	<div class="wrapper">
+	
+		<!-- BEGIN Dark navigation bar -->
+		<nav class="blue">
+			<ul class="clear">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a>
+					<ul>
+						<li><a href="#">Branding</a></li>
+						<li><a href="#">Print</a></li>
+						<li><a href="#">Web</a></li>
+						<li><a href="#">Marketing</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Clients</a></li>
+				<li><a href="#">Our blog</a></li>
+				<li><a href="#">Downloads</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+		</nav>
+		<!-- END Dark navigation bar -->
+		
+	</div>
+	
+</body>
+</html>
